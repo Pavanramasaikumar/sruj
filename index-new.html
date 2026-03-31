@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlamourGlow - Beauty Parlour | Premium Beauty Services</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <i class="ri-flower-line"></i>
+            GlamourGlow
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <button class="btn-login" onclick="window.location.href='login-new.html'">Login</button>
+            <button class="btn-register" onclick="window.location.href='register-new.html'">Register</button>
+        </div>
+        <button class="menu-toggle"><i class="ri-menu-line"></i></button>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Enhance Your Natural Beauty</h1>
+            <p>Premium beauty and wellness services for the modern woman</p>
+            <button class="btn-primary" onclick="window.location.href='booking.html'">Book an Appointment</button>
+            <button class="btn-secondary" onclick="window.location.href='services.html'">Explore Services</button>
+        </div>
+    </section>
+
+    <!-- FEATURED SERVICES -->
+    <section class="container">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Discover our range of premium beauty treatments</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <i class="ri-scissors-2-line"></i>
+                <h3>Hair Styling</h3>
+                <p>Professional haircuts, coloring, and treatments with premium products</p>
+            </div>
+            <div class="card">
+                <i class="ri-makeup-line"></i>
+                <h3>Makeup</h3>
+                <p>Expert makeup for daily wear, events, and special occasions</p>
+            </div>
+            <div class="card">
+                <i class="ri-spa-line"></i>
+                <h3>Facials</h3>
+                <p>Rejuvenating facials and skincare treatments for all skin types</p>
+            </div>
+            <div class="card">
+                <i class="ri-hand-heart-line"></i>
+                <h3>Manicure & Pedicure</h3>
+                <p>Luxurious nail care services with gel and nail art options</p>
+            </div>
+            <div class="card">
+                <i class="ri-wiper-line"></i>
+                <h3>Threading & Waxing</h3>
+                <p>Precision hair removal with expert technicians</p>
+            </div>
+            <div class="card">
+                <i class="ri-meditation-line"></i>
+                <h3>Massage & Wellness</h3>
+                <p>Relaxing body massages and wellness treatments</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="container" style="background: var(--light-purple); padding: 100px 20px; border-radius: 20px; margin: 50px 20px;">
+        <div class="section-title">
+            <h2>What Our Clients Say</h2>
+            <p>Join hundreds of happy customers</p>
+        </div>
+        <div class="testimonials-container">
+            <div style="flex: 1;"></div>
+            <div style="flex: 2;">
+                <div class="testimonial" style="display: block;">
+                    <p>"Amazing experience! The team is professional and the services are absolutely worth it."</p>
+                    <div class="testimonial-author">Sarah Johnson</div>
+                </div>
+                <div class="testimonial" style="display: none;">
+                    <p>"Best beauty parlour in town! I love their attention to detail and customer service."</p>
+                    <div class="testimonial-author">Emily Davis</div>
+                </div>
+                <div class="testimonial" style="display: none;">
+                    <p>"Highly recommended! The staff is friendly and the results are fantastic."</p>
+                    <div class="testimonial-author">Jessica Brown</div>
+                </div>
+            </div>
+            <div style="flex: 1;"></div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-btn" onclick="prevTestimonial()"><i class="ri-arrow-left-s-line"></i></button>
+            <button class="slider-btn" onclick="nextTestimonial()"><i class="ri-arrow-right-s-line"></i></button>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="container" style="text-align: center; padding: 100px 20px;">
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div>
+                <h2 style="font-size: 48px; color: var(--primary-pink); font-weight: 700;">500+</h2>
+                <p style="font-size: 16px; color: var(--secondary-purple);">Happy Clients</p>
+            </div>
+            <div>
+                <h2 style="font-size: 48px; color: var(--primary-pink); font-weight: 700;">8+</h2>
+                <p style="font-size: 16px; color: var(--secondary-purple);">Years Experience</p>
+            </div>
+            <div>
+                <h2 style="font-size: 48px; color: var(--primary-pink); font-weight: 700;">25+</h2>
+                <p style="font-size: 16px; color: var(--secondary-purple);">Professional Staff</p>
+            </div>
+            <div>
+                <h2 style="font-size: 48px; color: var(--primary-pink); font-weight: 700;">1000+</h2>
+                <p style="font-size: 16px; color: var(--secondary-purple);">Services Completed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="container" style="background: var(--light-purple); padding: 100px 20px; border-radius: 20px; margin: 50px 20px;">
+        <div class="section-title">
+            <h2>Why Choose GlamourGlow?</h2>
+            <p>Experience the difference with our premium services</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <i class="ri-star-fill" style="color: var(--gold);"></i>
+                <h3>Premium Quality</h3>
+                <p>We use only high-quality, professional beauty products</p>
+            </div>
+            <div class="card">
+                <i class="ri-user-heart-line"></i>
+                <h3>Expert Team</h3>
+                <p>Our certified professionals have years of experience</p>
+            </div>
+            <div class="card">
+                <i class="ri-shield-check-line"></i>
+                <h3>Hygiene & Safety</h3>
+                <p>Strict hygiene standards and sterilized equipment</p>
+            </div>
+            <div class="card">
+                <i class="ri-home-heart-line"></i>
+                <h3>Relaxing Ambiance</h3>
+                <p>Luxurious spa-like environment for your comfort</p>
+            </div>
+            <div class="card">
+                <i class="ri-price-tag-3-line"></i>
+                <h3>Affordable Pricing</h3>
+                <p>Premium services at competitive prices</p>
+            </div>
+            <div class="card">
+                <i class="ri-phone-line"></i>
+                <h3>24/7 Support</h3>
+                <p>Quick response to all your inquiries</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="container" style="text-align: center; padding: 100px 20px;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 45px; color: var(--primary-pink); margin-bottom: 20px;">Ready to Transform Your Look?</h2>
+        <p style="font-size: 18px; color: var(--secondary-purple); margin-bottom: 30px; font-weight: 300;">Book your appointment today and experience luxury beauty care</p>
+        <button class="btn-primary" onclick="window.location.href='booking.html'" style="font-size: 16px; padding: 16px 50px;">Book Now</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About GlamourGlow</h4>
+                <p style="font-size: 14px; color: #d1d5db;">Your ultimate destination for beauty and wellness services with premium quality and professional care.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="ri-phone-line"></i> +1 (555) 123-4567</li>
+                    <li><i class="ri-mail-line"></i> info@glamourglow.com</li>
+                    <li><i class="ri-map-pin-line"></i> 123 Beauty Lane, City</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="ri-facebook-circle-line"></i></a>
+                    <a href="#" title="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" title="Twitter"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" title="YouTube"><i class="ri-youtube-line"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GlamourGlow Beauty Parlour. All rights reserved. | Your Beauty, Our Passion</p>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"><i class="ri-arrow-up-line"></i></button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

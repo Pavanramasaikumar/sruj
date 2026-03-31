@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlamourGlow - Test Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #d946a6;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f3e8ff;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: #9333ea;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .link-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 15px;
+            background: #f8f8f8;
+            border-radius: 8px;
+            border-left: 4px solid #d946a6;
+            transition: all 0.3s;
+        }
+
+        .link-item:hover {
+            background: #f3e8ff;
+            transform: translateX(5px);
+        }
+
+        .link-item a {
+            color: #d946a6;
+            text-decoration: none;
+            font-weight: 500;
+            flex: 1;
+        }
+
+        .link-item a:hover {
+            text-decoration: underline;
+        }
+
+        .status {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status.main {
+            background: #d946a630;
+            color: #d946a6;
+        }
+
+        .status.auth {
+            background: #9333ea30;
+            color: #9333ea;
+        }
+
+        .status.content {
+            background: #fbbf2430;
+            color: #b8860b;
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #d946a6;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #be123c;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #f3e8ff;
+            color: #d946a6;
+            border: 2px solid #d946a6;
+        }
+
+        .btn-secondary:hover {
+            background: #d946a6;
+            color: white;
+        }
+
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #fbbf24;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .demo-box {
+            background: #dbeafe;
+            border-left: 4px solid #0284c7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .feature-item {
+            padding: 12px;
+            background: #f0fdf4;
+            border-radius: 8px;
+            font-size: 13px;
+            border-left: 4px solid #22c55e;
+        }
+
+        .feature-item::before {
+            content: "✅ ";
+            font-weight: bold;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 15px;
+            background: #f8f8f8;
+            border-radius: 8px;
+        }
+
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d946a6;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #f3e8ff;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .button-group, .feature-grid, .stats {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <span style="font-size: 30px;">🌸</span> GlamourGlow Test Page
+        </h1>
+        <p class="subtitle">Complete website test hub - Click any link to navigate</p>
+
+        <!-- MAIN PAGES -->
+        <div class="section">
+            <h2>📄 Main Pages</h2>
+            <div class="link-list">
+                <div class="link-item">
+                    <a href="index-new.html">🏠 Home Page</a>
+                    <span class="status main">Main</span>
+                </div>
+                <div class="link-item">
+                    <a href="about.html">ℹ️ About Us</a>
+                    <span class="status content">Content</span>
+                </div>
+                <div class="link-item">
+                    <a href="services.html">💅 Services</a>
+                    <span class="status content">Content</span>
+                </div>
+                <div class="link-item">
+                    <a href="gallery.html">🎨 Gallery</a>
+                    <span class="status content">Content</span>
+                </div>
+                <div class="link-item">
+                    <a href="contact.html">📞 Contact</a>
+                    <span class="status content">Content</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- AUTHENTICATION PAGES -->
+        <div class="section">
+            <h2>🔐 Authentication</h2>
+            <div class="link-list">
+                <div class="link-item">
+                    <a href="login-new.html">👤 Login</a>
+                    <span class="status auth">Auth</span>
+                </div>
+                <div class="link-item">
+                    <a href="register-new.html">📝 Register</a>
+                    <span class="status auth">Auth</span>
+                </div>
+                <div class="link-item">
+                    <a href="update-password-new.html">🔑 Update Password</a>
+                    <span class="status auth">Auth</span>
+                </div>
+                <div class="link-item">
+                    <a href="booking.html">📅 Book Appointment</a>
+                    <span class="status content">Content</span>
+                </div>
+            </div>
+
+            <div class="demo-box">
+                <strong>🎯 Demo Account (Pre-registered):</strong><br>
+                <strong>Email:</strong> demo@beauty.com<br>
+                <strong>Password:</strong> demo123<br>
+                ℹ️ Click "Use Demo" on login page to auto-fill credentials
+            </div>
+        </div>
+
+        <!-- FEATURES -->
+        <div class="section">
+            <h2>✨ Features Included</h2>
+            <div class="feature-grid">
+                <div class="feature-item">Responsive Design</div>
+                <div class="feature-item">Form Validation</div>
+                <div class="feature-item">User Authentication</div>
+                <div class="feature-item">Gallery Filtering</div>
+                <div class="feature-item">Testimonials Slider</div>
+                <div class="feature-item">Mobile Menu</div>
+                <div class="feature-item">LocalStorage Data</div>
+                <div class="feature-item">Scroll-to-Top Button</div>
+            </div>
+        </div>
+
+        <!-- STATISTICS -->
+        <div class="section">
+            <h2>📊 Codebase Statistics</h2>
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number">11</div>
+                    <div class="stat-label">HTML Pages</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">600+</div>
+                    <div class="stat-label">CSS Lines</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">400+</div>
+                    <div class="stat-label">JS Lines</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- QUICK TESTS -->
+        <div class="section">
+            <h2>🧪 Quick Tests</h2>
+            <div class="button-group">
+                <button class="btn-primary" onclick="runTests()">Run All Tests</button>
+                <button class="btn-secondary" onclick="viewLocalStorage()">View LocalStorage</button>
+            </div>
+            <div class="button-group">
+                <button class="btn-secondary" onclick="clearLocalStorage()">Clear All Data</button>
+                <button class="btn-secondary" onclick="openConsole()">Open Console (F12)</button>
+            </div>
+
+            <div class="info-box">
+                <strong>📌 Test Tips:</strong>
+                <ul style="margin-top: 10px; padding-left: 20px;">
+                    <li>Test on mobile, tablet, and desktop</li>
+                    <li>Check responsive design by resizing window</li>
+                    <li>Try all form validations (email, password)</li>
+                    <li>Book appointment after login</li>
+                    <li>Check LocalStorage after each action</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- DOCUMENTATION -->
+        <div class="section">
+            <h2>📚 Documentation</h2>
+            <div class="link-list">
+                <div class="link-item">
+                    <a href="README.md" target="_blank">📖 Full Documentation</a>
+                    <span class="status main">Docs</span>
+                </div>
+                <div class="link-item">
+                    <a href="QUICK_REFERENCE.md" target="_blank">⚡ Quick Reference</a>
+                    <span class="status main">Docs</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FILE STRUCTURE -->
+        <div class="section">
+            <h2>📁 Project Structure</h2>
+            <div style="background: #f8f8f8; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 12px; overflow-x: auto;">
+                <pre>web site/
+├── index-new.html .................. Home Page
+├── login-new.html .................. Login Page
+├── register-new.html ............... Register Page
+├── about.html ...................... About Page
+├── services.html ................... Services Page
+├── gallery.html .................... Gallery Page
+├── booking.html .................... Booking Page
+├── contact.html .................... Contact Page
+├── update-password-new.html ........ Update Password
+├── css/style.css ................... Stylesheet (600+ lines)
+├── js/script.js .................... JavaScript (400+ lines)
+├── README.md ....................... Full Documentation
+├── QUICK_REFERENCE.md .............. Quick Guide
+└── TEST.html ....................... This File</pre>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>💄 GlamourGlow Beauty Parlour - Complete Website v1.0</p>
+            <p>Built with HTML5, CSS3 & Vanilla JavaScript</p>
+            <p style="margin-top: 10px; font-size: 11px;">All data stored locally using Browser LocalStorage</p>
+        </div>
+    </div>
+
+    <script>
+        function runTests() {
+            const tests = [
+                { name: 'Check AuthSystem', fn: () => typeof AuthSystem !== 'undefined' },
+                { name: 'Check LocalStorage support', fn: () => typeof localStorage !== 'undefined' },
+                { name: 'Check Page title', fn: () => document.title.includes('GlamourGlow') }
+            ];
+
+            let results = '🧪 TEST RESULTS:\n\n';
+            tests.forEach(test => {
+                try {
+                    const result = test.fn();
+                    results += `${result ? '✅' : '❌'} ${test.name}\n`;
+                } catch (e) {
+                    results += `❌ ${test.name} - Error: ${e.message}\n`;
+                }
+            });
+
+            results += '\n📊 LocalStorage Info:\n';
+            results += `Users: ${JSON.parse(localStorage.getItem('glamour_users') || '[]').length}\n`;
+            results += `Current User: ${localStorage.getItem('glamour_current_user') ? 'Yes' : 'No'}\n`;
+            results += `Bookings: ${JSON.parse(localStorage.getItem('glamour_bookings') || '[]').length}\n`;
+
+            alert(results);
+        }
+
+        function viewLocalStorage() {
+            let data = 'LocalStorage Contents:\n\n';
+            data += '👥 Users:\n' + JSON.stringify(JSON.parse(localStorage.getItem('glamour_users') || '[]'), null, 2) + '\n\n';
+            data += '👤 Current User:\n' + JSON.stringify(JSON.parse(localStorage.getItem('glamour_current_user') || '{}'), null, 2) + '\n\n';
+            data += '📅 Bookings:\n' + JSON.stringify(JSON.parse(localStorage.getItem('glamour_bookings') || '[]'), null, 2);
+            alert(data);
+        }
+
+        function clearLocalStorage() {
+            if (confirm('⚠️ This will delete ALL local data! Continue?')) {
+                localStorage.clear();
+                alert('✅ All data cleared!');
+                location.reload();
+            }
+        }
+
+        function openConsole() {
+            alert('Press F12 or Ctrl+Shift+J to open Developer Console');
+        }
+    </script>
+</body>
+</html>
